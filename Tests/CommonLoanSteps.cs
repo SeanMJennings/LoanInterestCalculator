@@ -17,14 +17,13 @@ public class CommonLoanSteps : Specification
     private const decimal amount_value = 1000m;
     protected const decimal base_interest_rate_value = 5m;
     private const decimal margin_interest_rate_value = 2.5m;
-    protected const int days_since_start_of_loan = 7;
     protected Currency currency;
     protected LocalDate start_date;
     protected LocalDate end_date;
     protected Money amount;
     protected InterestRate base_interest_rate;
     protected InterestRate margin_interest_rate;
-    protected Loan loan;
+    protected Loan loan = null!;
 
     protected override void before_each()
     {

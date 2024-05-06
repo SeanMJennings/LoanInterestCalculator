@@ -7,7 +7,7 @@ namespace Tests;
 
 public class Specification
 {
-    protected static Exception error;
+    protected static Exception error = null!;
 
     [SetUp]
     protected virtual void before_each()

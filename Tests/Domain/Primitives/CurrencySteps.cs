@@ -6,7 +6,7 @@ namespace Tests.Domain.Primitives;
 public partial class CurrencySpecsShould : Specification
 {
     private Currency currency;
-    private string code;
+    private string code = string.Empty;
     private string US_code = "US";
     private string unknown_code = "wibble";
     private string US_iso_currency_symbol = "USD";
