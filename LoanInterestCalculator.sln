@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{BFDB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{18341916-DC45-43D1-9876-BDCF44ABACFA}"
 	ProjectSection(SolutionItems) = preProject
-		.github\BuildAndTest.yaml = .github\BuildAndTest.yaml
+		.github\workflows\BuildAndTest.yaml = .github\workflows\BuildAndTest.yaml
 	EndProjectSection
 EndProject
 Global
