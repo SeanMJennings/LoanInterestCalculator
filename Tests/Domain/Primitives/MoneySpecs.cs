@@ -22,7 +22,7 @@ public partial class MoneySpecsShould
     }
     
     [Test]
-    public void can_multiply_money()
+    public void multiply_money()
     {
         Given(a_positive_decimal_value);
         And(converting_to_money);

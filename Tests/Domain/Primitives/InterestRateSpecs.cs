@@ -14,7 +14,7 @@ public partial class InterestRateSpecsShould
     }
     
     [Test]
-    public void can_add_interest_rates_together()
+    public void add_interest_rates_together()
     {
         Given(an_interest_rate);
         And(another_interest_rate);

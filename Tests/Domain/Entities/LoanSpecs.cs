@@ -20,7 +20,7 @@ public partial class LoanSpecsShould
     }
     
     [Test]
-    public void end_date_must_be_greater_than_start_date()
+    public void ensure_end_date_must_be_greater_than_start_date()
     {
        Given(a_start_date);
        And(an_end_date_equal_to_start_date);
@@ -33,7 +33,7 @@ public partial class LoanSpecsShould
     }
     
     [Test]
-    public void loan_value_must_be_greater_than_zero()
+    public void ensure_loan_value_must_be_greater_than_zero()
     {
        Given(a_start_date);
        And(an_end_date);
@@ -46,7 +46,7 @@ public partial class LoanSpecsShould
     }
     
     [Test]
-    public void total_interest_rate_must_be_greater_than_zero()
+    public void ensure_total_interest_rate_must_be_greater_than_zero()
     {
        Given(a_start_date);
        And(an_end_date);

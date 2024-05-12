@@ -24,7 +24,7 @@ public partial class LoanRepositorySpecsShould
     }
     
     [Test]
-    public void informs_when_loan_does_not_exist()
+    public void inform_when_loan_does_not_exist()
     {
         Given(a_non_existent_loan_id);
         When(Validating(updating_a_non_existing_loan));
@@ -32,7 +32,7 @@ public partial class LoanRepositorySpecsShould
     }
     
     [Test]
-    public void lists_loans()
+    public void list_loans()
     {
         Given(a_loan);
         And(another_loan);
