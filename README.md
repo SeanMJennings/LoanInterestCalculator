@@ -1,5 +1,6 @@
 # LoanInterestCalculator
-Implement a Loan Interest Calculator for banking customers guidelines
+Implement a Loan Interest Calculator for banking customers 
+## Guidelines
 - Produce a small console application.
 - Use an in-memory store.
 - Simple interest formula: https://www.investopedia.com/terms/s/simple_interest.asp
