@@ -9,14 +9,16 @@ namespace Tests;
 
 public class CommonLoanSteps : Specification
 {
-    protected const int loan_id = 1;
-    private const string US_code = "US";
+    protected const uint loan_id = 1;
+    protected const string UK_code = "GB";
+    protected const string UK_iso_currency_symbol = "GBP";
+    protected const string US_code = "US";
     protected const string US_iso_currency_symbol = "USD";
     protected const string start_date_value = "2022-01-01";
     protected const string end_date_value = "2022-12-31";
-    private const decimal amount_value = 1000m;
+    protected const decimal amount_value = 1000m;
     protected const decimal base_interest_rate_value = 5m;
-    private const decimal margin_interest_rate_value = 2.5m;
+    protected const decimal margin_interest_rate_value = 2.5m;
     protected Currency currency;
     protected LocalDate start_date;
     protected LocalDate end_date;
@@ -54,7 +56,7 @@ public class CommonLoanSteps : Specification
 
     protected void a_currency()
     {
-        currency = new Currency(US_code);
+        currency = new Currency(UK_code);
     }
 
     protected void a_base_interest_rate()
@@ -73,10 +75,10 @@ public class CommonLoanSteps : Specification
         loan.Id.Should().Be(1);
         loan.StartDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture).Should().Be(start_date_value);
         loan.EndDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture).Should().Be(end_date_value);
-        ((decimal)loan.Amount).Should().Be(amount);
-        loan.Currency.ToString().Should().Be(US_iso_currency_symbol);
-        ((decimal)loan.BaseInterestRate).Should().Be(base_interest_rate);
-        ((decimal)loan.MarginInterestRate).Should().Be(margin_interest_rate);
+        ((decimal)loan.Amount).Should().Be(amount_value);
+        loan.Currency.ToString().Should().Be(UK_iso_currency_symbol);
+        ((decimal)loan.BaseInterestRate).Should().Be(base_interest_rate_value);
+        ((decimal)loan.MarginInterestRate).Should().Be(margin_interest_rate_value);
     }
 
     protected void is_formatted_correctly()

@@ -3,7 +3,7 @@
 namespace Tests.Application;
 
 [TestFixture]
-public partial class LoanRepositorySpecsShould
+public partial class LoanBuilderSpecsShould
 {
     [Test]
     public void create_loan()

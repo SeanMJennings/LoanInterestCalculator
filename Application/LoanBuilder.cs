@@ -2,6 +2,7 @@
 using Domain.Entities;
 using Domain.Primitives;
 using NodaTime;
+using Persistence;
 using Utilities;
 
 namespace Application;
@@ -31,6 +32,12 @@ public class LoanBuilder(IAmALoanRepository loanRepository)
     {
         Amount = new Money(value);
         return this;
+    }    
+    
+    public LoanBuilder WithAmount(decimal value)
+    {
+        Amount = new Money(value);
+        return this;
     }
     
     public LoanBuilder WithCurrency(string value)
@@ -43,9 +50,21 @@ public class LoanBuilder(IAmALoanRepository loanRepository)
     {
         BaseInterestRate = new InterestRate(value);
         return this;
+    }    
+    
+    public LoanBuilder WithBaseInterestRate(decimal value)
+    {
+        BaseInterestRate = new InterestRate(value);
+        return this;
     }
     
     public LoanBuilder WithMarginInterestRate(string value)
+    {
+        MarginInterestRate = new InterestRate(value);
+        return this;
+    }    
+    
+    public LoanBuilder WithMarginInterestRate(decimal value)
     {
         MarginInterestRate = new InterestRate(value);
         return this;

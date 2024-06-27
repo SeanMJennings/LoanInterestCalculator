@@ -12,6 +12,7 @@ public static class LoanInterestCalculator
         {
             CreateOrUpdateLoan();
         }
+        // ReSharper disable once FunctionNeverReturns
     }
     
     private static void CreateOrUpdateLoan()

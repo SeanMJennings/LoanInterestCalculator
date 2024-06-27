@@ -21,4 +21,22 @@
       <ProjectReference Include="..\UI\UI.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="Application\LoanBuilderSteps.cs">
+        <DependentUpon>LoanBuilderSpecs.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Domain\Entities\LoanSteps.cs">
+        <DependentUpon>LoanSpecs.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Domain\Primitives\CurrencySteps.cs">
+        <DependentUpon>CurrencySpecs.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Domain\Primitives\InterestRateSteps.cs">
+        <DependentUpon>InterestRateSpecs.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Domain\Primitives\MoneySteps.cs">
+        <DependentUpon>MoneySpecs.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>
